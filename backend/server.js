@@ -53,6 +53,7 @@ app.use(errorHandler);
 
 
 //static files
+const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, "./frontend/build")));
 
 app.get('*', function (req,res) {
